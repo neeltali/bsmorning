@@ -33,7 +33,7 @@ private DataSource dataSource;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		String param = request.getParameter("page");
-		if(param != null && param.equals("insertdata")) {
+		if(param.equals("insertdata")) {
 			getServletContext().getRequestDispatcher("/insertdata.jsp").forward(request, response);
 		}
 		
@@ -45,9 +45,11 @@ private DataSource dataSource;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		System.out.println("starting");
 		try {
 			//initialize the database
 			Connection con= DBConnect.initializeDatabase();
+			
 			//Create a SQL query to insert data into table1 table
 			//table1 table consist of two columns, so two '?' is used
 			PreparedStatement st= con.prepareStatement("insert into second values(?,?)");
@@ -55,10 +57,10 @@ private DataSource dataSource;
 			//For the first parameter
 			//get the data using request object
 			// sets the data to st pointer
-			st.setInt(1, Integer.valueOf(request.getParameter("id")));
-			
+			st.setInt(1, Integer.valueOf(request.getParameter("sid")));
+			//st.setString(1, request.getParameter("sid"));
 			//Same for second parameter
-			st.setString(2, request.getParameter("string"));
+			st.setString(2, request.getParameter("sname"));
 			
 			//Execute the insert command using executeUpdate()
             // to make changes in database

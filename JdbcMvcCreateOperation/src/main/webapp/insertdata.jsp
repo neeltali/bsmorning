@@ -9,13 +9,13 @@
 <body>
 
 <form action="./InsertData" method="post">
-<p>ID:</p>
+<p>enter id:</p>
 <!-- Create an element with mandatory name attribute,
 so that data can be transfer to the servlet using getParameter()  -->
-<input type="text" name="id"/>
+<input type="text" name="sid"/>
 <br/>
-<p>String:</p>
-<input type="text" name="string"/>
+<p>enter name:</p>
+<input type="text" name="sname"/>
 <br/><br/><br/>
 <input type="submit"/>
 </form>
