@@ -11,6 +11,8 @@
 <a href="<%= request.getContextPath() %>/InsertData?page=insertdata"> CREAT Operation</a>
 <br>
 <a href="<%= request.getContextPath() %>/RetrieveData?page=retrievedata"> Retrieve Data</a>
+<br>
+<a href="<%= request.getContextPath() %>/UpdateData?page=updatedata"> update Data</a>
 
 
 </body>
