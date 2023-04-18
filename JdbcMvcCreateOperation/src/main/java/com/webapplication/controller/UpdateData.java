@@ -46,7 +46,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			
 		
 			Statement st = con.createStatement();
-		String query= "update second set sname= 'suraj' where sid='343'";
+		String query= "update second set sname= 'govind' where sid='150'";
 		
 			st.executeUpdate(query);
 			

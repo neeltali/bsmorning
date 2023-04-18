@@ -13,6 +13,8 @@
 <a href="<%= request.getContextPath() %>/RetrieveData?page=retrievedata"> Retrieve Data</a>
 <br>
 <a href="<%= request.getContextPath() %>/UpdateData?page=updatedata"> update Data</a>
+<br>
+<a href="<%= request.getContextPath() %>/DeleteData?page=deletedata"> Delete Data</a>
 
 
 </body>
